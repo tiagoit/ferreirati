@@ -42,7 +42,7 @@ export class PomodoroComponent implements OnInit {
         this.notification.notify("Time is up. Good job young grasshopper!")
         this.notification.playSound();
       }
-    }, 100);
+    }, 1000);
   }
 
 }
