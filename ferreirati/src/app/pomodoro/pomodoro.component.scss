@@ -1,0 +1,23 @@
+.mat-card {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeSelect {
+    button:first-child {
+        margin-right: 16px;
+    }
+}
+
+.timer {
+    font-size: 36px;
+    .colon {
+        margin: 0 4px;
+    }
+}
+
+.finished {
+    display: flex;
+}

@@ -1,0 +1,17 @@
+<mat-card>
+  <div class="timeSelect" *ngIf="state == _state.timeSelect">
+    <button mat-stroked-button color="primary" (click)="startTimer(2)">25 min</button>
+    <button mat-stroked-button color="primary" (click)="startTimer(50)">50 min</button>  
+  </div>
+  
+  <div class="timer" *ngIf="state == _state.timer">
+    <span class="minutes">{{minutes | twoDigits}}</span>
+    <span class="colon">:</span>
+    <span class="seconds">{{seconds | twoDigits}}</span>
+  </div>
+
+  <div class="finished" *ngIf="state == _state.finished">
+    <div>Time is up. Well done young grasshopper!</div>
+    <button mat-stroked-button color="warn" (click)="state = _state.timeSelect">OK</button>  
+  </div>
+</mat-card>
