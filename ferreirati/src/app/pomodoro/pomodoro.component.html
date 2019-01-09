@@ -5,9 +5,14 @@
   </div>
   
   <div class="timer" *ngIf="state == _state.timer">
-    <span class="minutes">{{minutes | twoDigits}}</span>
-    <span class="colon">:</span>
-    <span class="seconds">{{seconds | twoDigits}}</span>
+    <div [style.color]="timerRunning ? 'rgba(0,0,0,0.7)' : 'red'">
+      <span class="minutes">{{minutes | twoDigits}}</span>
+      <span class="colon">:</span>
+      <span class="seconds">{{seconds | twoDigits}}</span>
+    </div>
+    <button mat-stroked-button color="primary" (click)="pauseTimer()" *ngIf="timerRunning">Pause</button>
+    <button mat-stroked-button color="primary" (click)="startTimer()" *ngIf="!timerRunning">Continue</button>
+    <mat-icon id="resetTimer" aria-label="reset timer" (click)="resetTimer()">refresh</mat-icon>
   </div>
 
   <div class="finished" *ngIf="state == _state.finished">

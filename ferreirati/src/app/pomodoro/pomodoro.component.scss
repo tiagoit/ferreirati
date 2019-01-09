@@ -3,21 +3,37 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
 
-.timeSelect {
-    button:first-child {
-        margin-right: 16px;
+    .timeSelect {
+        button:first-child {
+            margin-right: 16px;
+        }
+    }
+    
+    .timer {
+        display: flex;
+        font-size: 36px;
+        color: rgba(0,0,0,0.7);
+        .colon {
+            margin: 0 4px;
+        }
+    
+        button {
+            margin-left: 16px;
+            width: 92px;
+        }
+    
+        #resetTimer {
+            position: absolute;
+            right: 4px;
+            top: 4px;
+            color: rgba(0,0,0,0.5);
+            cursor: pointer;
+        }
+    }
+    
+    .finished {
+        display: flex;
     }
 }
 
-.timer {
-    font-size: 36px;
-    .colon {
-        margin: 0 4px;
-    }
-}
-
-.finished {
-    display: flex;
-}
